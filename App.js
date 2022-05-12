@@ -10,26 +10,6 @@ export default function App() {
   const [numero, setNumero] = useState(0);
   const [botao, setBotao] = useState('VAI');
   const [ultimo, setUltimo] = useState(null);
-  const [macaco1, setmacaco1] = useState('macaco')
-
-
-  function macaco(){
-    if(ss < 8 ){
-      return (<Image
-        style={styles.img}
-        source={require('./src/H-1.png')}
-        />)
-    }
-
-    if(ss > 5){
-      return (<Image
-        style={styles.img}
-        source={require('./src/H-4.png')}
-        />)
-    }
-
-   
-  }
 
   function vai(){
 
@@ -53,8 +33,6 @@ export default function App() {
           mm = 0;
           hh++;
         }
-
-       
 
 
         let format =
@@ -86,6 +64,8 @@ export default function App() {
     mm = 0;
     hh = 0;
     setBotao('VAI');
+
+
   }
 
  return (
@@ -95,13 +75,6 @@ export default function App() {
     style={styles.img}
     source={require('./src/crono.png')}
     />
-
-    <view>
-
-    {macaco(true)}
-    
-
-    </view>
 
     <Text style={styles.timer}> {numero} </Text>
 
@@ -134,7 +107,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#3b5998'
   },
   timer:{
-    marginTop: 1,
+    marginTop: -140,
     fontSize: 45,
     fontWeight: 'bold',
     color: '#FFF'
